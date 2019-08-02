@@ -25,7 +25,7 @@ body{
 }
 
 .navi-left {
-  font-size: 1em;
+  font-size: 1.05em;
 }
 
 .navi-right {
@@ -36,7 +36,7 @@ body{
 .navi-right > div {
   text-transform: uppercase;
   margin-left: 20px;
-  font-size: 1em;
+  font-size: 1.05em;
 }
 
 /*decorating navigation links area*/
