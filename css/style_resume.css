@@ -1,0 +1,101 @@
+/*grabs the whole body of the html doc */
+body{
+  /* font size/line space/font */
+  font-family: "Lato", sans-serif;
+  /*rids of the default margin of 8px*/
+  margin: 0px;
+  background-color: #f5f5f5;
+}
+
+/*for the container. use "." in front cuz its a class*/
+.container{
+  display: grid;
+  /*create template column using 1 fractional unit*/
+  grid-template-columns: 1fr;
+
+}
+
+/*navigation*/
+
+.navi-wrapper {
+  /*move navi div to the right; no more things on top of each other*/
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.navi-left {
+  font-size: 1.05em;
+}
+
+.navi-right {
+  display: flex;
+}
+
+/*setting up navigation links*/
+.navi-right > div {
+  text-transform: uppercase;
+  margin-left: 20px;
+  font-size: 1.05em;
+}
+
+/*decorating navigation links area*/
+.navi-link {
+  height: 20px;
+  border-bottom: 1px solid transparent;
+  /*custom border animation appears for 0.5s*/
+  transition: border-bottom 0.5s;
+}
+
+/*decorating the links themselves*/
+.navi-link a {
+  color: #000000;
+  text-decoration: none;
+}
+
+/*animation for border bottom when hovering over navi links*/
+.navi-link:hover {
+  /*grey border appears when hovered over*/
+  border-bottom: 1px solid #8a8a8a;
+}
+
+/*animation for menu links when hovering over*/
+.navi-link a:hover {
+  /*menu links turn grey when hovered over*/
+  color: #000000;
+}
+
+
+/*content*/
+/*all 3 content items*/
+.content-items {
+  width:45%; /*95% of the pagewidth */
+  display: grid;
+  /*divide into columns; in this case only 3 columns*/
+  grid-template-columns: 1fr;
+  margin:auto; /*move things in the middle*/
+  overflow:hidden; /*something goes outside of the div, want it to be hidden*/
+}
+
+/*individual content item*/
+.content-item {
+  /*flexible position of each item*/
+  position: relative;
+}
+
+/*css settings for the three portfolio images*/
+.content-img-background {
+  position: relative;
+  width:  525px;
+  height: 200px;
+  background-position: 50% 50%;
+  background-repeat:   no-repeat;
+  background-size: cover;
+}
+
+.card-content {
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  font-size: 1.05em;
+}

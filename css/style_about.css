@@ -1,0 +1,127 @@
+/*grabs the whole body of the html doc */
+body{
+  /* font size/line space/font */
+  font-family: "Lato", sans-serif;
+  /*rids of the default margin of 8px*/
+  margin: 0px;
+  background-color: #f5f5f5;
+}
+
+/*for the container. use "." in front cuz its a class*/
+.container {
+  /*layouts in grid */
+  display: grid;
+  /*create template column using 1 fractional unit*/
+  grid-template-columns: 1fr;
+}
+
+/*navigation*/
+
+.navi-wrapper {
+  /*move navi div to the right; no more things on top of each other*/
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.navi-left {
+  font-size: 1.05em;
+}
+
+.navi-right {
+  display: flex;
+}
+
+/*setting up navigation links*/
+.navi-right > div {
+  text-transform: uppercase;
+  margin-left: 20px;
+  font-size: 1.05em;
+}
+
+/*decorating navigation links area*/
+.navi-link {
+  height: 20px;
+  border-bottom: 1px solid transparent;
+  /*custom border animation appears for 0.5s*/
+  transition: border-bottom 0.5s;
+}
+
+/*decorating the links themselves*/
+.navi-link a {
+  color: #000000;
+  text-decoration: none;
+}
+
+/*animation for border bottom when hovering over navi links*/
+.navi-link:hover {
+  /*grey border appears when hovered over*/
+  border-bottom: 1px solid #8a8a8a;
+}
+
+/*animation for menu links when hovering over*/
+.navi-link a:hover {
+  /*menu links turn grey when hovered over*/
+  color: #000000;
+}
+
+
+/*content*/
+/*all 3 content items*/
+.content-items {
+  display: grid;
+  /*divide into columns; in this case only 3 columns*/
+  grid-template-columns: 1fr;
+}
+
+/*individual content item*/
+.content-item {
+  /*flexible position of each item*/
+  position: relative;
+}
+
+/*css settings for the three portfolio images*/
+.content-img-background {
+  height: 950px;
+  width: auto;
+  background-size: cover;
+  /*if image not same size, then crop so they sit nicely beside each other*/
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+/*img text is centered; align left and right, use full height*/
+.img-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.subtitle-link {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.content-wrapper:hover .img-text{
+  opacity: 0.85;
+}
+
+
+.subtitle-link a {
+  color: #ffffff;
+  text-decoration: none;
+}
